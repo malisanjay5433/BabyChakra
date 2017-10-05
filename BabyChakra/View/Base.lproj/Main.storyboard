@@ -54,7 +54,7 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uZ-Ec-9eX" customClass="VideoPlayer" customModule="BabyChakra" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="337" height="222"/>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.99079567189999995" green="0.280218631" blue="0.38013988729999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s80-nP-7Wu">
                                             <rect key="frame" x="8" y="231" width="337" height="48"/>
@@ -72,7 +72,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="Uh6-is-JmC" firstAttribute="leading" secondItem="s80-nP-7Wu" secondAttribute="leading" constant="8" id="cc1-91-ULT"/>
                                                 <constraint firstItem="kIi-DH-KbL" firstAttribute="leading" secondItem="s80-nP-7Wu" secondAttribute="leading" constant="8" id="j2Q-c5-6Ap"/>

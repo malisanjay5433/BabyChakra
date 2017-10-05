@@ -15,7 +15,6 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         urls = self.parse()
         navigation()
     }
-    
     private func navigation(){
         self.navigationItem.title = "BabyChakra"
         self.navigationController?.navigationBar.prefersLargeTitles = true
