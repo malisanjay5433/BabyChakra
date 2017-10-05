@@ -92,7 +92,6 @@ class VideoPlayer: UIView {
             }
         }
     }
-    
     //MARK: View configuration
     private func setUpView() {
         self.backgroundColor = .red
@@ -226,7 +225,6 @@ class VideoPlayer: UIView {
             playerController.player?.play()
         }
     }
-    //MARK: Player size observing
     private func addPlayerObservers() {
         playerController.player?.addObserver(self, forKeyPath: "rate", options: .new, context: nil)
         playerController.contentOverlayView?.addObserver(self, forKeyPath: "bounds", options: .new, context: nil)
@@ -251,6 +249,6 @@ class VideoPlayer: UIView {
             break
         }
     }
-
+    
 }
 

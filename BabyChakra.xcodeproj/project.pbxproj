@@ -12,7 +12,6 @@
 		9B034AFB1F8358150066B7B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B034AFA1F8358150066B7B9 /* Assets.xcassets */; };
 		9B034AFE1F8358150066B7B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B034AFC1F8358150066B7B9 /* LaunchScreen.storyboard */; };
 		9B034B061F8358320066B7B9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B034B051F8358320066B7B9 /* HomeViewController.swift */; };
-		9B034B081F8358530066B7B9 /* Laucher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B034B071F8358530066B7B9 /* Laucher.swift */; };
 		9B034B0C1F8376F30066B7B9 /* VideoFrameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B034B0B1F8376F30066B7B9 /* VideoFrameCell.swift */; };
 		9B6A454E1F855AB7007A7220 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6A454D1F855AB7007A7220 /* VideoPlayer.swift */; };
 		9B8330721F866967002800DB /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8330711F866967002800DB /* VideoModel.swift */; };
@@ -26,7 +25,6 @@
 		9B034AFD1F8358150066B7B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B034AFF1F8358150066B7B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B034B051F8358320066B7B9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		9B034B071F8358530066B7B9 /* Laucher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Laucher.swift; sourceTree = "<group>"; };
 		9B034B0B1F8376F30066B7B9 /* VideoFrameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFrameCell.swift; sourceTree = "<group>"; };
 		9B6A454D1F855AB7007A7220 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		9B8330711F866967002800DB /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
@@ -62,18 +60,41 @@
 		9B034AF21F8358150066B7B9 /* BabyChakra */ = {
 			isa = PBXGroup;
 			children = (
-				9B034B051F8358320066B7B9 /* HomeViewController.swift */,
+				9B8330771F86832A002800DB /* Controller */,
+				9B8330761F868324002800DB /* Model */,
+				9B8330751F86831E002800DB /* View */,
 				9B034AF31F8358150066B7B9 /* AppDelegate.swift */,
-				9B034AF71F8358150066B7B9 /* Main.storyboard */,
 				9B034AFA1F8358150066B7B9 /* Assets.xcassets */,
-				9B034AFC1F8358150066B7B9 /* LaunchScreen.storyboard */,
-				9B034AFF1F8358150066B7B9 /* Info.plist */,
-				9B034B071F8358530066B7B9 /* Laucher.swift */,
 				9B034B0B1F8376F30066B7B9 /* VideoFrameCell.swift */,
+				9B034AFF1F8358150066B7B9 /* Info.plist */,
+			);
+			path = BabyChakra;
+			sourceTree = "<group>";
+		};
+		9B8330751F86831E002800DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B034AFC1F8358150066B7B9 /* LaunchScreen.storyboard */,
+				9B034AF71F8358150066B7B9 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B8330761F868324002800DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				9B6A454D1F855AB7007A7220 /* VideoPlayer.swift */,
 				9B8330711F866967002800DB /* VideoModel.swift */,
 			);
-			path = BabyChakra;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B8330771F86832A002800DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B034B051F8358320066B7B9 /* HomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +169,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B034B081F8358530066B7B9 /* Laucher.swift in Sources */,
 				9B8330721F866967002800DB /* VideoModel.swift in Sources */,
 				9B034B0C1F8376F30066B7B9 /* VideoFrameCell.swift in Sources */,
 				9B034AF41F8358150066B7B9 /* AppDelegate.swift in Sources */,

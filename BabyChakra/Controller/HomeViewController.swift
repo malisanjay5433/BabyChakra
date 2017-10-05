@@ -15,7 +15,16 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         urls = self.parse()
         navigation()
     }
-    func parse() ->[urlModel]{
+    private func navigation(){
+        self.navigationItem.title = "BabyChakra"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        collectionView?.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.tintColor = UIColor.init(red: 70/255, green: 195/255, blue: 217/255, alpha: 1)
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.collectionView?.backgroundColor = UIColor.init(red:234/255, green:79/255, blue: 101/255, alpha: 1)
+    }
+    private func parse() ->[urlModel]{
         let string_Url = "https://api.myjson.com/bins/qxfi9"
         let url = URL(string:string_Url)
         URLSession.shared.dataTask(with:url!) { (data, response, error) in
@@ -33,29 +42,10 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
                 print(error)
             }
             }.resume()
-         return self.urls
-    }
-    private func navigation(){
-        self.navigationItem.title = "BabyChakra"
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        collectionView?.backgroundColor = UIColor.white
-        self.navigationController?.navigationBar.barStyle = .black
-        self.navigationController?.navigationBar.tintColor = UIColor.init(red: 70/255, green: 195/255, blue: 217/255, alpha: 1)
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.collectionView?.backgroundColor = UIColor.init(red:234/255, green:79/255, blue: 101/255, alpha: 1)
+        return self.urls
     }
     
-    @objc func startTimer(thetimer:Timer){
-        print("thetimer:\(thetimer)")
-        DispatchQueue.main.async {
-            self.collectionView?.reloadData()
-        }
-        UIView.animate(withDuration: 3.0, delay:0.5, options: .curveEaseOut, animations: {
-            self.collectionView?.scrollToItem(at: IndexPath(row:thetimer.userInfo! as! Int, section:0),at: .centeredVertically,animated: true)
-        }, completion: nil)
-    }
 }
-
 extension HomeViewController{
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -87,16 +77,13 @@ extension HomeViewController{
         }else{
             row = 0
         }
-        //        scrollTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(HomeViewController.startTimer(thetimer:)), userInfo: row, repeats: true)
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print("collectionView.frame.width\(collectionView.frame.width,collectionView.frame.height)")
         return CGSize(width:collectionView.frame.width, height: 320)
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
-        
     }
 }

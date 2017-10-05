@@ -9,7 +9,7 @@
 import UIKit
 
 class VideoFrameCell: UICollectionViewCell {
-  @IBOutlet weak var vframe:VideoPlayer?
+    @IBOutlet weak var vframe:VideoPlayer?
     @IBOutlet weak var titleLbl:UILabel?
     @IBOutlet weak var descriptionLbl:UILabel?
     @IBOutlet weak var back_View:UIView?

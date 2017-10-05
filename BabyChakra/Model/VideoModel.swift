@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 struct VideoModel: Decodable {
     var data: VideoURLModel
 }
