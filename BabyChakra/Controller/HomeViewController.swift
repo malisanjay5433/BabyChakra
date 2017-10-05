@@ -15,6 +15,7 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         urls = self.parse()
         navigation()
     }
+    
     private func navigation(){
         self.navigationItem.title = "BabyChakra"
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -24,6 +25,7 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         self.navigationController?.navigationBar.isTranslucent = true
         self.collectionView?.backgroundColor = UIColor.init(red:234/255, green:79/255, blue: 101/255, alpha: 1)
     }
+    
     private func parse() ->[urlModel]{
         let string_Url = "https://api.myjson.com/bins/qxfi9"
         let url = URL(string:string_Url)
