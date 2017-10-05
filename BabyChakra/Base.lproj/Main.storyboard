@@ -1,24 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="y0c-fs-ew7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--BabyChakra-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BabyChakra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="BabyChakra" id="JNz-Ur-zwn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="606" y="97"/>
+        </scene>
+        <!--BabyChakra-->
+        <scene sceneID="YfJ-8L-wr3">
+            <objects>
+                <collectionViewController id="hLP-rx-3iX" customClass="HomeViewController" customModule="BabyChakra" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="BjW-Gc-uIN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99079567189999995" green="0.280218631" blue="0.38013988729999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="GXb-L7-yTK">
+                            <size key="itemSize" width="353" height="285"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="a31-NA-zHZ">
+                            <rect key="frame" x="0.0" y="-116" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="sIU-cB-aPA" customClass="VideoFrameCell" customModule="BabyChakra" customModuleProvider="target">
+                                <rect key="frame" x="11" y="4" width="353" height="285"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="285"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uZ-Ec-9eX" customClass="VideoPlayer" customModule="BabyChakra" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="8" width="337" height="222"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s80-nP-7Wu">
+                                            <rect key="frame" x="8" y="231" width="337" height="48"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measured bandwidth" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh6-is-JmC">
+                                                    <rect key="frame" x="8" y="4" width="153" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrption" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kIi-DH-KbL">
+                                                    <rect key="frame" x="8" y="25.5" width="66.5" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Uh6-is-JmC" firstAttribute="leading" secondItem="s80-nP-7Wu" secondAttribute="leading" constant="8" id="cc1-91-ULT"/>
+                                                <constraint firstItem="kIi-DH-KbL" firstAttribute="leading" secondItem="s80-nP-7Wu" secondAttribute="leading" constant="8" id="j2Q-c5-6Ap"/>
+                                                <constraint firstItem="Uh6-is-JmC" firstAttribute="top" secondItem="s80-nP-7Wu" secondAttribute="top" constant="4" id="jVn-ga-SwH"/>
+                                                <constraint firstItem="kIi-DH-KbL" firstAttribute="top" secondItem="Uh6-is-JmC" secondAttribute="bottom" constant="2" id="jmK-cW-rWK"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.99079567189999995" green="0.280218631" blue="0.38013988729999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="s80-nP-7Wu" secondAttribute="trailing" constant="8" id="AHO-GD-bxf"/>
+                                    <constraint firstAttribute="bottom" secondItem="4uZ-Ec-9eX" secondAttribute="bottom" constant="55" id="G2m-9j-PS5"/>
+                                    <constraint firstAttribute="bottom" secondItem="s80-nP-7Wu" secondAttribute="bottom" constant="6" id="Gbt-Qb-bz0"/>
+                                    <constraint firstItem="s80-nP-7Wu" firstAttribute="leading" secondItem="sIU-cB-aPA" secondAttribute="leading" constant="8" id="Nwp-Nd-slf"/>
+                                    <constraint firstItem="s80-nP-7Wu" firstAttribute="top" secondItem="4uZ-Ec-9eX" secondAttribute="bottom" constant="1" id="ShN-eQ-vDO"/>
+                                    <constraint firstItem="4uZ-Ec-9eX" firstAttribute="leading" secondItem="sIU-cB-aPA" secondAttribute="leading" constant="8" id="e8b-cd-dqW"/>
+                                    <constraint firstAttribute="trailing" secondItem="4uZ-Ec-9eX" secondAttribute="trailing" constant="8" id="esl-kz-Jsn"/>
+                                    <constraint firstItem="4uZ-Ec-9eX" firstAttribute="top" secondItem="sIU-cB-aPA" secondAttribute="top" constant="8" id="jGQ-cs-uGH"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="back_View" destination="s80-nP-7Wu" id="cGA-Dg-WF6"/>
+                                    <outlet property="descriptionLbl" destination="kIi-DH-KbL" id="rp8-Rm-TQB"/>
+                                    <outlet property="titleLbl" destination="Uh6-is-JmC" id="h35-pp-fCY"/>
+                                    <outlet property="vframe" destination="4uZ-Ec-9eX" id="Mxc-ea-hfR"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="hLP-rx-3iX" id="0n5-sf-1U9"/>
+                            <outlet property="delegate" destination="hLP-rx-3iX" id="A07-Vs-bNi"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="BabyChakra" id="OXn-xA-GAJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="BjW-Gc-uIN" id="8CS-1u-RB2"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCW-8H-0mz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2056.8000000000002" y="247.82608695652175"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nct-1L-MfA">
+            <objects>
+                <viewController id="dpZ-nY-7iB" customClass="ViewController" customModule="BabyChakra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ddI-W0-vIm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="s27-T7-Um9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ze0-hg-I3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3020" y="250.52473763118442"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BpV-6i-10L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qZl-iM-uer" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="EGV-BZ-ayD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NGP-NN-MVB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ubl-E2-Vcy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-137" y="53"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iJw-vn-NpI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y0c-fs-ew7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="zhr-h2-JXr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.99079567189999995" green="0.280218631" blue="0.38013988729999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hLP-rx-3iX" kind="relationship" relationship="rootViewController" id="Hwa-3g-trr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xTq-Mf-te3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369.5999999999999" y="250.9745127436282"/>
         </scene>
     </scenes>
 </document>
